@@ -2045,15 +2045,20 @@ function redzlib:MakeWindow(Configs)
 				WaitClick, Default = true, Val
 				SetFlag(Flag, Default)
 				Funcs:FireCallback(Callback, Default)
-				if Default then
+						if Default then
 					CreateTween({Toggle, "Position", UDim2.new(1, 0, 0.5), 0.25})
 					CreateTween({Toggle, "BackgroundTransparency", 0, 0.25})
 					CreateTween({Toggle, "AnchorPoint", Vector2.new(1, 0.5), 0.25, Wait or false})
+					CreateTween({ToggleHolder, "BackgroundColor3", Color3.fromRGB(255, 255, 255), 0.25})
+					CreateTween({Toggle, "BackgroundColor3", Color3.fromRGB(0, 0, 0), 0.25})
 				else
 					CreateTween({Toggle, "Position", UDim2.new(0, 0, 0.5), 0.25})
 					CreateTween({Toggle, "BackgroundTransparency", 0.8, 0.25})
 					CreateTween({Toggle, "AnchorPoint", Vector2.new(0, 0.5), 0.25, Wait or false})
+					CreateTween({ToggleHolder, "BackgroundColor3", Theme["Color Stroke"], 0.25})
+					CreateTween({Toggle, "BackgroundColor3", Theme["Color Theme"], 0.25})
 				end
+
 				WaitClick = false
 			end;task.spawn(SetToggle, Default)
 			
