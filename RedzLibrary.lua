@@ -1423,28 +1423,32 @@ function redzlib:MakeWindow(Configs)
 		end
 	end;LoadFile()
 	
-	local UISizeX, UISizeY = unpack(redzlib.Save.UISize)
+		local UISizeX, UISizeY = unpack(redzlib.Save.UISize)
 	
 	local wallpaperID = "rbxassetid://121718181100499"
 
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 1,
-		Image = wallpaperID,
 		ScaleType = Enum.ScaleType.Crop,
 		Name = "Hub"
 	}), "Main")
 	
-	Create("Frame", MainFrame, {
+	-- Garante que o Wallpaper fique por cima do tema padrão
+	MainFrame.BackgroundTransparency = 1
+	MainFrame.Image = wallpaperID
+	
+	-- Cria o fundo escuro de forma segura e nativa
+	local DarkFrame = Create("Frame", MainFrame, {
 		Size = UDim2.fromScale(1, 1),
 		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
 		BackgroundTransparency = 0.55,
-		ZIndex = 0
-	}, {
-		Create("UICorner", { CornerRadius = UDim.new(0, 8) })
+		ZIndex = 0,
+		Name = "DarkBackground"
 	})
+	Make("Corner", DarkFrame)
 	
+	-- Sistema seguro para arrastar a janela
 	pcall(function()
 		if MakeDrag then
 			MakeDrag(MainFrame, MainFrame)
