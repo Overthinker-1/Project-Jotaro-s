@@ -10,36 +10,36 @@ local PlayerMouse = Player:GetMouse()
 
 local redzlib = {
 	Themes = {
-		Darker = {
-            ["Color Hub 1"] = ColorSequence.new({
-                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(30, 30, 30)),
-                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(35, 35, 35)),
-                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))
-            }),
-            ["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
-            ["Color Stroke"] = Color3.fromRGB(45, 45, 45),
-            ["Color Theme"] = Color3.fromRGB(255, 255, 255),
-            ["Color Text"] = Color3.fromRGB(240, 240, 240),
-            ["Color Dark Text"] = Color3.fromRGB(150, 150, 150)
-        },
-
-		Darker = {
+		 			Darker = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(10, 16, 32)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(12, 18, 36)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 16, 32))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(30, 30, 30)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(35, 35, 35)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(12, 20, 38),
-			["Color Stroke"] = Color3.fromRGB(0, 160, 255),
-			["Color Theme"] = Color3.fromRGB(240, 245, 255),
-			["Color Text"] = Color3.fromRGB(245, 245, 245),
-			["Color Dark Text"] = Color3.fromRGB(140, 160, 190)
+			["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+			["Color Stroke"] = Color3.fromRGB(45, 45, 45),
+			["Color Theme"] = Color3.fromRGB(255, 255, 255),    -- Caixas de texto brancas como na foto!
+			["Color Text"] = Color3.fromRGB(240, 240, 240),
+			["Color Dark Text"] = Color3.fromRGB(150, 150, 150)
 		},
+
+		Dark = {
+			["Color Hub 1"] = ColorSequence.new({
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(45, 45, 45)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(20, 20, 20)) -- Bug do texto em japonês removido e corrigido!
+			}),
+			["Color Hub 2"] = Color3.fromRGB(12, 12, 12),
+			["Color Stroke"] = Color3.fromRGB(55, 55, 55),
+			["Color Theme"] = Color3.fromRGB(255, 255, 255),
+			["Color Text"] = Color3.fromRGB(255, 255, 255),
+			["Color Dark Text"] = Color3.fromRGB(160, 160, 160)
+		},
+
 		Purple = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27.5, 25, 30)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32.5, 32.5, 32.5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(27.5, 25, 30))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(27, 25, 30)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(32, 32, 32)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(27, 25, 30))
 			}),
 			["Color Hub 2"] = Color3.fromRGB(30, 30, 30),
 			["Color Stroke"] = Color3.fromRGB(40, 40, 40),
@@ -47,6 +47,7 @@ local redzlib = {
 			["Color Text"] = Color3.fromRGB(240, 240, 240),
 			["Color Dark Text"] = Color3.fromRGB(180, 180, 180)
 		}
+
 	},
 	Info = {
 		Version = "1.1.0"
