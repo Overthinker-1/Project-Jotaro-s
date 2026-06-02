@@ -1425,7 +1425,7 @@ function redzlib:MakeWindow(Configs)
 	
 		local UISizeX, UISizeY = unpack(redzlib.Save.UISize)
 	
-	local wallpaperID = "rbxassetid://81405879361617"
+	local wallpaperID = "rbxassetid://86801152334985"
 
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
