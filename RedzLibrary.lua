@@ -1453,6 +1453,7 @@ function redzlib:MakeWindow(Configs)
 		end
 	end)
 
+
 	local MainCorner = Make("Corner", MainFrame)
 	
 	local Components = Create("Folder", MainFrame, {
