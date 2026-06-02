@@ -12,28 +12,28 @@ local redzlib = {
 	Themes = {
 		Darker = {
             ["Color Hub 1"] = ColorSequence.new({
-                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(10, 16, 32)),
-                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(12, 18, 36)),
-                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 16, 32))
+                ColorSequenceKeypoint.new(0.00, Color3.fromRGB(30, 30, 30)),
+                ColorSequenceKeypoint.new(0.50, Color3.fromRGB(35, 35, 35)),
+                ColorSequenceKeypoint.new(1.00, Color3.fromRGB(30, 30, 30))
             }),
-            ["Color Hub 2"] = Color3.fromRGB(12, 20, 38),
-            ["Color Stroke"] = Color3.fromRGB(25, 45, 85),
-            ["Color Theme"] = Color3.fromRGB(0, 160, 255),
-            ["Color Text"] = Color3.fromRGB(240, 245, 255),
-            ["Color Dark Text"] = Color3.fromRGB(140, 160, 190)
+            ["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+            ["Color Stroke"] = Color3.fromRGB(45, 45, 45),
+            ["Color Theme"] = Color3.fromRGB(255, 255, 255),
+            ["Color Text"] = Color3.fromRGB(240, 240, 240),
+            ["Color Dark Text"] = Color3.fromRGB(150, 150, 150)
         },
 
 		Dark = {
 			["Color Hub 1"] = ColorSequence.new({
-				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(40, 40, 40)),
-				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(47.5, 47.5, 47.5)),
-				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(40, 40, 40))
+				ColorSequenceKeypoint.new(0.00, Color3.fromRGB(10, 16, 32)),
+				ColorSequenceKeypoint.new(0.50, Color3.fromRGB(12, 18, 36)),
+				ColorSequenceKeypoint.new(1.00, Color3.fromRGB(10, 16, 32))
 			}),
-			["Color Hub 2"] = Color3.fromRGB(45, 45, 45),
-			["Color Stroke"] = Color3.fromRGB(65, 65, 65),
-			["Color Theme"] = Color3.fromRGB(65, 150, 255),
+			["Color Hub 2"] = Color3.fromRGB(12, 20, 38),
+			["Color Stroke"] = Color3.fromRGB(0, 160, 255),
+			["Color Theme"] = Color3.fromRGB(240, 245, 255),
 			["Color Text"] = Color3.fromRGB(245, 245, 245),
-			["Color Dark Text"] = Color3.fromRGB(190, 190, 190)
+			["Color Dark Text"] = Color3.fromRGB(140, 160, 190)
 		},
 		Purple = {
 			["Color Hub 1"] = ColorSequence.new({
