@@ -1435,8 +1435,8 @@ function redzlib:MakeWindow(Configs)
 		ScaleType = Enum.ScaleType.Crop,
 		Name = "Hub"
 	}), "Main")
-		
-		Create("Frame", MainFrame, {
+	
+	Create("Frame", MainFrame, {
 		Size = UDim2.fromScale(1, 1),
 		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
 		BackgroundTransparency = 0.55,
@@ -1444,9 +1444,14 @@ function redzlib:MakeWindow(Configs)
 	}, {
 		Create("UICorner", { CornerRadius = UDim.new(0, 8) })
 	})
-
-	MakeDrag(MainFrame)
-
+	
+	pcall(function()
+		if MakeDrag then
+			MakeDrag(MainFrame, MainFrame)
+		elseif redzlib.MakeDrag then
+			redzlib.MakeDrag(MainFrame, MainFrame)
+		end
+	end)
 
 	local MainCorner = Make("Corner", MainFrame)
 	
