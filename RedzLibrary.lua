@@ -1424,16 +1424,30 @@ function redzlib:MakeWindow(Configs)
 	end;LoadFile()
 	
 	local UISizeX, UISizeY = unpack(redzlib.Save.UISize)
+	
+	local wallpaperID = "rbxassetid://121718181100499"
+
 	local MainFrame = InsertTheme(Create("ImageButton", ScreenGui, {
 		Size = UDim2.fromOffset(UISizeX, UISizeY),
 		Position = UDim2.new(0.5, -UISizeX/2, 0.5, -UISizeY/2),
-		BackgroundTransparency = 0.03,
+		BackgroundTransparency = 1,
+		Image = wallpaperID,
+		ScaleType = Enum.ScaleType.Crop,
 		Name = "Hub"
 	}), "Main")
-	Make("Gradient", MainFrame, {
-		Rotation = 45
-	})MakeDrag(MainFrame)
-	
+		
+		Create("Frame", MainFrame, {
+		Size = UDim2.fromScale(1, 1),
+		BackgroundColor3 = Color3.fromRGB(0, 0, 0),
+		BackgroundTransparency = 0.55,
+		ZIndex = 0
+	}, {
+		Create("UICorner", { CornerRadius = UDim.new(0, 8) })
+	})
+
+	MakeDrag(MainFrame)
+
+
 	local MainCorner = Make("Corner", MainFrame)
 	
 	local Components = Create("Folder", MainFrame, {
